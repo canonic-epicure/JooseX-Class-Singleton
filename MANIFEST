@@ -1,9 +1,6 @@
 Build.PL
 doc/html/JooseX/Class/Singleton.html
-doc/html/JooseX/Class/Singleton/Class.html
 doc/mmd/JooseX/Class/Singleton.txt
-doc/mmd/JooseX/Class/Singleton/Class.txt
-inc/Module/Build/Functions.pm
 inc/Module/Build/Functions/DSL.pm
 inc/Module/Build/JSAN.pm
 inc/Module/Build/JSAN/Installable.pm
@@ -11,8 +8,7 @@ inc/Module/JSAN.pm
 inc/Module/JSAN/DSL.pm
 INSTALL
 lib/JooseX/Class/Singleton.js
-lib/JooseX/Class/Singleton/Class.js
-MANIFEST			This list of files
+MANIFEST
 META.json
 README.md
 t/010_sanity.t.js
