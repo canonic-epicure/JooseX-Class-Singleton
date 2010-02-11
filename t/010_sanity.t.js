@@ -1,6 +1,6 @@
 StartTest(function(t) {
     
-	t.plan(14)
+	t.plan(15)
     
     var async0 = t.beginAsync()
     
@@ -100,6 +100,21 @@ StartTest(function(t) {
         t.ok(instance1 instanceof Some.Class1, 'its an instance of Some.Class1, really #1')
         t.ok(instance1.attr == 'value1', 'its an instance of Some.Class1, really #2')
         t.ok(instance1.process() == 'result1', 'its an instance of Some.Class1, really #3')
+        
+        
+        //======================================================================================================================================================================================================================================================
+        t.diag('Inheritance')
+        
+        Class("Some.Class2", {
+            isa : Some.Class
+        })
+        
+        var instance1 = Some.Class2()
+        var instance2 = new Some.Class2()
+        var instance3 = new Some.Class2()
+        
+        
+        t.ok(instance1 == instance2 && instance2 == instance3, "'Singleton-nessment' was inherited along with metaclass")
         
         
         t.endAsync(async0)

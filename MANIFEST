@@ -5,6 +5,7 @@ doc/mmd/JooseX/Class/Singleton.txt
 doc/mmd/JooseX/Class/Singleton/Class.txt
 inc/Module/Build/Functions.pm
 inc/Module/Build/Functions/DSL.pm
+inc/Module/Build/JSAN.pm
 inc/Module/Build/JSAN/Installable.pm
 inc/Module/JSAN.pm
 inc/Module/JSAN/DSL.pm

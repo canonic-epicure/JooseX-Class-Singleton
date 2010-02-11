@@ -5,7 +5,7 @@ name            JooseX.Class.Singleton
 version         0.01
 author          'Nickolay (SamuraiJack) Platonov <root@symbie.org>'
 
-abstract        'A trait turning your class into singleton'
+abstract        'A trait, turning your class into singleton'
 license         lgpl
 
 
