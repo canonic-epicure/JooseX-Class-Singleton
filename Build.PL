@@ -9,6 +9,6 @@ abstract        'A trait, turning your class into singleton'
 license         lgpl
 
 
-requires        Task.Joose.Stable   3.004
+requires        Task.Joose.Stable   3.04
 
 docs_markup     mmd

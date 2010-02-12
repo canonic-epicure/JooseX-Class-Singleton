@@ -2,30 +2,117 @@ Name
 ====
 
 
-JooseX.Class.Singleton - Some clever yet compact description
+JooseX.Class.Singleton - a trait, turning your class into singleton
 
 
 SYNOPSIS
 ========
 
-        Class("JooseX.Class.Singleton", {
+        Class("Some.Class", {
         
+            trait : JooseX.Class.Singleton,
+            
+            has : {
+                attribute   : null
+            },
+            
+            
+            methods : {
+            
+                configure : function (params) {
+                }
+            }
         })
         
-        var instance = new JooseX.Class.Singleton({
+        var instance1 = new Some.Class({
+            attribute : 'value'
         })
         
+        var instance2 = new Some.Class()
+        
+        //preferred way
+        var instance3 = Some.Class()
+        
+        t.ok(instance1 == instance2 && instance2 == instance3, '3 ways to access a singleton instance - choose one')
+        
+        
+        //or equivalent declaration
+
+        Singleton("Some.Class", {
+        
+            has : {
+                attribute   : null
+            },
+            
+            
+            methods : {
+            
+                configure : function (params) {
+                    this.attribute = params
+                }
+            }
+        })
 
 
 DESCRIPTION
 ===========
 
-`JooseX.Class.Singleton` is a stub for JSAN modules.
+`JooseX.Class.Singleton` is a meta-role, turning your class into singleton.
+
+You can apply it as a trait (the 1st example in the synopsys), or you can use the new declaration helper: `Singleton`
 
 
+USAGE
+=====
 
-EXAMPLES
-========
+To receive the singleton instance use the constructor of the class. You can use it in any form - with or without `new` keyword.
+
+        Singleton('Some.Class', {
+            ...
+        })
+        
+        var instance = Some.Class()
+        
+        //or
+
+        var instance = new Some.Class()
+        
+        
+The first call to constructor will *instantiate* singleton. The parameters passed to this first call, will be passed into actual underlaying constructor.
+
+The further calls to constructor will *reconfigure* singleton. The parameters passed to further calls, will be passed into call to `configure` method
+of the class (if it has one).
+
+
+INHERITANCE
+===========
+
+Note, that by default, the subclasses uses the same metaclass as their parents. Thus, if you'll subclass the singleton, the resulting class will be 
+a singleton either (even without applied traits or `Singleton` helper usage):
+
+        Class('Some.Singleton', {
+            trait : JooseX.Class.Singleton,
+            ...
+        })
+
+        
+        // this class will be a singleton as well
+        
+        Class('Another.Class', {
+            isa : Some.Singleton
+        })
+
+If you'd like to avoid this - then specify the metaclass explicitly:
+
+        // this class will be a usual class 
+        // inheriting all attributes/methods of Some.Singleton
+        // but not its "singleton-nessment"
+
+        Class('Another.Class', {
+            meta : Joose.Meta.Class,
+            
+            isa : Some.Singleton
+        })
 
 
 GETTING HELP
