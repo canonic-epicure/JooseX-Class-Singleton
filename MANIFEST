@@ -12,4 +12,5 @@ MANIFEST
 META.json
 README.md
 t/010_sanity.t.js
+t/020_singleton_with_traits.t.js
 t/index.html
