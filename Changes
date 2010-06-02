@@ -1,0 +1,19 @@
+0.02   Wednesday, June 02, 2010
+
+    [ENHANCEMENTS]
+    
+    -none-
+     
+    
+    [API CHANGES]
+
+    -none-
+    
+
+    [BUG FIXES]
+    
+    - fixed bug, when during complex overrides of constructor, it could not been "adapted"
+
+0.01   .........
+
+    Initial release

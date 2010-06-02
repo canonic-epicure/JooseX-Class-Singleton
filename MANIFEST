@@ -1,6 +1,8 @@
 Build.PL
+Changes
 doc/html/JooseX/Class/Singleton.html
 doc/mmd/JooseX/Class/Singleton.txt
+inc/Module/Build/Functions.pm
 inc/Module/Build/Functions/DSL.pm
 inc/Module/Build/JSAN.pm
 inc/Module/Build/JSAN/Installable.pm
