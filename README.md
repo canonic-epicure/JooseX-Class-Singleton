@@ -131,7 +131,7 @@ SEE ALSO
 
 Web page of this module: <http://github.com/SamuraiJack/JooseX-Class-Singleton/>
 
-General documentation for Joose: <http://openjsan.org/go/?l=Joose>
+General documentation for Joose: <http://Joose.github.com/Joose>
 
 
 BUGS
